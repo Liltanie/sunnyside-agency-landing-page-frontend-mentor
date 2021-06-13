@@ -215,3 +215,28 @@ header{
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
 }
+
+footer{
+    --color-text: hsl(168, 34%, 41%);
+    background-color: hsl(165, 46%, 74%);
+    padding: 5em 0;
+
+    .logo{
+        width: 10em;
+        margin: auto;
+    }
+
+    .btns{
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        margin-top: 1.5em;
+    }
+
+    .social-media{
+        display: flex;
+        justify-content: center;
+        gap: 1.5em;
+        margin-top: 3em;
+    }
+}

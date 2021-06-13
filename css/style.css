@@ -199,4 +199,26 @@ header .top {
   grid-template-rows: auto auto;
 }
 
+footer {
+  --color-text: hsl(168, 34%, 41%);
+  background-color: #9edbcc;
+  padding: 5em 0;
+}
+footer .logo {
+  width: 10em;
+  margin: auto;
+}
+footer .btns {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1.5em;
+}
+footer .social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin-top: 3em;
+}
+
 /*# sourceMappingURL=style.css.map */
