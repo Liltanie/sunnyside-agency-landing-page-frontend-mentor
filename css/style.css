@@ -22,6 +22,11 @@ h1, h2, h3, h4, p {
   margin: 0;
 }
 
+.container {
+  padding: 3em 1.5em;
+  max-width: 50em;
+}
+
 .spacing > * + * {
   margin-top: var(--spacer, 3rem);
 }
@@ -94,13 +99,14 @@ h1, h2, h3, h4, p {
   text-transform: uppercase;
   color: var(--grey);
   font-size: 1.025rem;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
 }
 
 .name {
   font-family: "Fraunces", serif;
   font-weight: 900;
   color: var(--dark-blue);
+  font-size: 1.1rem;
 }
 
 .job {
@@ -139,7 +145,6 @@ header .top {
   --color-text: var(--dark-blue);
 }
 .benefits__info {
-  padding: 3em 1.5em;
   text-align: center;
 }
 .benefits__info--small {
@@ -165,6 +170,27 @@ header .top {
 }
 .benefits--stand-out {
   --color-accent: var(--soft-red);
+}
+
+.social-proof {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  --spacer: 4rem;
+}
+.social-proof > div {
+  width: 100%;
+}
+.social-proof > div p {
+  margin-top: 2rem;
+}
+.social-proof > div .job {
+  margin-top: 0.5rem;
+}
+.social-proof img {
+  width: 4.5rem;
+  border-radius: 50%;
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -24,7 +24,12 @@ h1,h2,h3,h4,p{
     margin: 0;
 }
 
-.spacing> * + *{
+.container{
+    padding: 3em 1.5em;
+    max-width: 50em;
+}
+
+.spacing > * + *{
     margin-top: var(--spacer, 3rem);
 }
 
@@ -98,13 +103,14 @@ h1,h2,h3,h4,p{
     text-transform: uppercase;
     color: var(--grey);
     font-size: 1.025rem;
-    letter-spacing: .3em;
+    letter-spacing: .2em;
 }
 
 .name{
     font-family: 'Fraunces', serif;
     font-weight: 900;
     color: var(--dark-blue);
+    font-size: 1.1rem;
 }
 
 .job{
@@ -145,7 +151,6 @@ header{
     --color-text: var(--dark-blue);
 
     &__info{
-        padding: 3em 1.5em;
         text-align: center;
 
         &--small{
@@ -177,5 +182,30 @@ header{
 
     &--stand-out{
         --color-accent: var(--soft-red);
+    }
+}
+
+.social-proof{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    --spacer: 4rem;
+
+    > div{
+        width: 100%;
+
+        p{
+            margin-top: 2rem;
+        }
+
+        .job{
+            margin-top: .5rem;
+        }
+    }
+
+    img{
+        width: 4.5rem;
+        border-radius: 50%;
+        margin: auto;
     }
 }
