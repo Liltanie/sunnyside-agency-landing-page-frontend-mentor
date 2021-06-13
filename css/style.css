@@ -23,7 +23,7 @@ h1, h2, h3, h4, p {
 }
 
 .spacing > * + * {
-  margin-top: var(--spacer, 2rem);
+  margin-top: var(--spacer, 3rem);
 }
 
 .btn {
@@ -46,8 +46,10 @@ h1, h2, h3, h4, p {
 .btn--learn-more {
   text-transform: uppercase;
   font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 0.9rem;
   color: var(--dark-blue);
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05em;
   position: relative;
 }
 .btn--learn-more::before {
@@ -56,12 +58,13 @@ h1, h2, h3, h4, p {
   height: 0.5em;
   background-color: var(--color-accent, #fa65ff);
   position: absolute;
-  top: 1.4rem;
+  top: 1.4em;
   left: 0;
   right: 0;
   margin: auto;
   z-index: -1;
-  opacity: 0.7;
+  opacity: 0.3;
+  border-radius: 1rem;
 }
 .btn--learn-more:hover::before {
   opacity: 1;
@@ -70,7 +73,7 @@ h1, h2, h3, h4, p {
 .primary-title {
   color: #fff;
   font-family: "Fraunces", serif;
-  font-weight: 800;
+  font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   font-size: 2rem;
@@ -82,7 +85,8 @@ h1, h2, h3, h4, p {
   font-family: "Fraunces", serif;
   font-size: 1.5rem;
   font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem);
-  color: var(--dark-blue);
+  color: var(--color-text);
+  font-weight: 900;
 }
 
 .tertiary-title {
@@ -95,13 +99,72 @@ h1, h2, h3, h4, p {
 
 .name {
   font-family: "Fraunces", serif;
-  font-weight: 800;
+  font-weight: 900;
   color: var(--dark-blue);
 }
 
 .job {
   color: var(--grey);
   font-size: 0.9rem;
+}
+
+header {
+  background-image: url(../images/mobile/image-header.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 28em;
+  text-align: center;
+}
+header > img {
+  margin: auto;
+}
+header .top {
+  padding: 2em 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 40em) {
+  .menu {
+    content: url(../images/icon-hamburger.svg);
+  }
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-auto-rows: auto;
+  --spacer: 1em;
+  --color-text: var(--dark-blue);
+}
+.benefits__info {
+  padding: 3em 1.5em;
+  text-align: center;
+}
+.benefits__info--small {
+  font-size: 0.9rem;
+  text-align: center;
+  padding-top: 20rem;
+  color: var(--color-text);
+}
+.benefits--img-inside {
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.benefits--graphic-design {
+  background-image: url(../images/mobile/image-graphic-design.jpg);
+  --color-text: hsl(167, 40%, 24%);
+}
+.benefits--photography {
+  background-image: url(../images/mobile/image-photography.jpg);
+  --color-text: hsl(198, 62%, 26%);
+}
+.benefits--transform {
+  --color-accent: var(--yellow) ;
+}
+.benefits--stand-out {
+  --color-accent: var(--soft-red);
 }
 
 /*# sourceMappingURL=style.css.map */
