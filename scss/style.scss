@@ -25,7 +25,7 @@ h1,h2,h3,h4,p{
 
 .container{
     width: 85%;
-    max-width: 65em;
+    max-width: 55em;
     margin: 0 auto;
 }
 
@@ -299,10 +299,53 @@ footer{
 }
 
 @media screen and (min-width: 46.5em) {
-    .social-proof__reviews{
-        flex-direction: row;
+    .benefits{
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "transform img-transform"
+            "img-stand-out stand-out"
+            "graphic-design photography";
+        
+        &__info--big{
+            padding: 5.5em;
+            width: auto;
+            text-align: left;
+        }
+
+        &--transform{
+            grid-area: transform;
+        }
+
+        .img-transform{
+            grid-area: img-transform;
+            content: url(../images/desktop/image-transform.jpg);
+        }
+
+        &--stand-out{
+            grid-area: stand-out;
+        }
+
+        .img-stand-out{
+            grid-area: img-stand-out;
+            content: url(../images/desktop/image-stand-out.jpg);
+        }
     }
-    
+
+    .social-proof{
+        padding: 6em 0;
+
+        &__reviews{
+            flex-direction: row;
+            gap: 1em;
+
+            img{
+                width: 3em;
+            }
+        }
+
+    }
+
     .gallery{
         grid-template-columns: auto auto auto auto;
 

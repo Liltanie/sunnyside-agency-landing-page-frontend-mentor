@@ -24,7 +24,7 @@ h1, h2, h3, h4, p {
 
 .container {
   width: 85%;
-  max-width: 65em;
+  max-width: 55em;
   margin: 0 auto;
 }
 
@@ -270,8 +270,40 @@ footer .social-media {
   }
 }
 @media screen and (min-width: 46.5em) {
+  .benefits {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "transform img-transform" "img-stand-out stand-out" "graphic-design photography";
+  }
+  .benefits__info--big {
+    padding: 5.5em;
+    width: auto;
+    text-align: left;
+  }
+  .benefits--transform {
+    grid-area: transform;
+  }
+  .benefits .img-transform {
+    grid-area: img-transform;
+    content: url(../images/desktop/image-transform.jpg);
+  }
+  .benefits--stand-out {
+    grid-area: stand-out;
+  }
+  .benefits .img-stand-out {
+    grid-area: img-stand-out;
+    content: url(../images/desktop/image-stand-out.jpg);
+  }
+
+  .social-proof {
+    padding: 6em 0;
+  }
   .social-proof__reviews {
     flex-direction: row;
+    gap: 1em;
+  }
+  .social-proof__reviews img {
+    width: 3em;
   }
 
   .gallery {
