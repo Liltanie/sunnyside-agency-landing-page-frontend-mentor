@@ -218,22 +218,25 @@ header{
 
 .social-proof{
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     padding: 4em 0;
-    --spacer: 4rem;
+    --spacer: 3rem;
 
-    > div{
-        width: 100%;
+    &__reviews{
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
 
-        p{
-            margin-top: 2rem;
+        > * {
+            width: 100%;
         }
+    }
+    
+    p{
+        margin-top: 1.5em;
+    }
 
-        .job{
-            margin-top: .5rem;
-        }
+    .job{
+        margin-top: .5em;
     }
 
     img{
@@ -291,6 +294,32 @@ footer{
 
         &--photography{
             background-image: url(../images/desktop/image-photography.jpg);
+        }
+    }
+}
+
+@media screen and (min-width: 46.5em) {
+    .social-proof__reviews{
+        flex-direction: row;
+    }
+    
+    .gallery{
+        grid-template-columns: auto auto auto auto;
+
+        &__milk-bottles{
+            content: url(../images/desktop/image-gallery-milkbottles.jpg);
+        }
+
+        &__orange{
+            content: url(../images/desktop/image-gallery-orange.jpg);
+        }
+
+        &__cone{
+            content: url(../images/desktop/image-gallery-cone.jpg);
+        }
+
+        &__sugarcubes{
+            content: url(../images/desktop/image-gallery-sugarcubes.jpg);
         }
     }
 }

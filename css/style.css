@@ -202,20 +202,22 @@ header .menu::after {
 
 .social-proof {
   text-align: center;
+  padding: 4em 0;
+  --spacer: 3rem;
+}
+.social-proof__reviews {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  padding: 4em 0;
-  --spacer: 4rem;
+  gap: 4em;
 }
-.social-proof > div {
+.social-proof__reviews > * {
   width: 100%;
 }
-.social-proof > div p {
-  margin-top: 2rem;
+.social-proof p {
+  margin-top: 1.5em;
 }
-.social-proof > div .job {
-  margin-top: 0.5rem;
+.social-proof .job {
+  margin-top: 0.5em;
 }
 .social-proof img {
   width: 4.5rem;
@@ -265,6 +267,27 @@ footer .social-media {
   }
   .benefits--photography {
     background-image: url(../images/desktop/image-photography.jpg);
+  }
+}
+@media screen and (min-width: 46.5em) {
+  .social-proof__reviews {
+    flex-direction: row;
+  }
+
+  .gallery {
+    grid-template-columns: auto auto auto auto;
+  }
+  .gallery__milk-bottles {
+    content: url(../images/desktop/image-gallery-milkbottles.jpg);
+  }
+  .gallery__orange {
+    content: url(../images/desktop/image-gallery-orange.jpg);
+  }
+  .gallery__cone {
+    content: url(../images/desktop/image-gallery-cone.jpg);
+  }
+  .gallery__sugarcubes {
+    content: url(../images/desktop/image-gallery-sugarcubes.jpg);
   }
 }
 
