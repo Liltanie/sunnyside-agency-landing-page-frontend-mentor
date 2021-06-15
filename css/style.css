@@ -23,8 +23,9 @@ h1, h2, h3, h4, p {
 }
 
 .container {
-  padding: 3em 1.5em;
-  max-width: 50em;
+  width: 85%;
+  max-width: 65em;
+  margin: 0 auto;
 }
 
 .spacing > * + * {
@@ -145,6 +146,7 @@ header .menu {
   width: 85%;
   height: 15em;
   --color-accent: var(--yellow);
+  display: none;
 }
 header .menu .btn--filled {
   margin-top: 0.5em;
@@ -164,13 +166,14 @@ header .menu::after {
 
 .benefits {
   display: grid;
-  grid-template-columns: 100vw;
+  grid-template-columns: 100%;
   grid-auto-rows: auto;
   --spacer: 1em;
   --color-text: var(--dark-blue);
 }
 .benefits__info {
   text-align: center;
+  padding: 4em 0;
 }
 .benefits__info--small {
   font-size: 0.9rem;
@@ -201,6 +204,8 @@ header .menu::after {
   text-align: center;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  padding: 4em 0;
   --spacer: 4rem;
 }
 .social-proof > div {

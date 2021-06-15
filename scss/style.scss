@@ -10,7 +10,6 @@
 body{
     font-family: 'Barlow', sans-serif;
     // font-family: 'Fraunces', serif;
-    // background-color: rgb(187, 187, 187);
     line-height: 1.5;
     color: var(--color-text);
 }
@@ -25,8 +24,9 @@ h1,h2,h3,h4,p{
 }
 
 .container{
-    padding: 3em 1.5em;
-    max-width: 50em;
+    width: 85%;
+    max-width: 65em;
+    margin: 0 auto;
 }
 
 .spacing > * + *{
@@ -169,19 +169,20 @@ header{
             top: -2em;
             right: 0;
         }
-        // display: none;
+        display: none;
     }
 }
 
 .benefits{
     display: grid;
-    grid-template-columns: 100vw;
+    grid-template-columns: 100%;
     grid-auto-rows: auto;
     --spacer: 1em;
     --color-text: var(--dark-blue);
 
     &__info{
         text-align: center;
+        padding: 4em 0;
 
         &--small{
             font-size: .9rem;
@@ -219,6 +220,8 @@ header{
     text-align: center;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    padding: 4em 0;
     --spacer: 4rem;
 
     > div{
