@@ -251,4 +251,21 @@ footer .social-media {
   margin-top: 3em;
 }
 
+@media screen and (min-width: 34em) {
+  header {
+    height: 100vh;
+    background-position: bottom;
+  }
+
+  .benefits__info--small {
+    padding: 18rem 0 4em;
+  }
+  .benefits--graphic-design {
+    background-image: url(../images/desktop/image-graphic-design.jpg);
+  }
+  .benefits--photography {
+    background-image: url(../images/desktop/image-photography.jpg);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
