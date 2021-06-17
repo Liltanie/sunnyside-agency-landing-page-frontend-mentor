@@ -38,16 +38,71 @@ h1,h2,h3,h4,p{
     text-decoration: none;
     padding: .5em 1.25em;
     outline: none;
-    color: var(--color-text);
+    position: relative;
     cursor: pointer;
+    color: var(--color-text);
+}
+
+.btn--standar:hover::before{
+    content: '';
+    position: absolute;
+    padding: .5em 1.25em;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    opacity: .5;
+    border-radius: 5rem;
+    background-color: var(--color-text);
+    animation: btn-standar .3s ease-in-out;
+}
+
+@keyframes btn-standar {
+    from{
+        padding: .3em;
+    }
+
+    to{
+        width: auto;
+        height: auto;
+    }
 }
 
 .btn--filled{
-    background-color: var(--color-accent);
     border-radius: 5rem;
     text-transform: uppercase;
     font-family: 'Fraunces', serif;
+    background-color: var(--color-accent);
     color: var(--dark-blue);
+    
+    &:hover::before{
+        content: 'CONTACT';
+        padding: .5em 1.25em;
+        position: absolute;
+        width: 10%;
+        top: 0;
+        left: 0;
+        background-color: var(--yellow);
+        border-radius: 5rem;
+        animation: btn-filled .7s ease-in-out forwards;
+    }
+}
+
+@keyframes btn-filled {
+    from{
+        width: 5%;
+    }
+
+    10%{
+        width: 5%;
+    }
+
+    70%{
+        width: 80%;
+    }
+
+    to{
+        width: 70%;
+    }
 }
 
 .btn--learn-more{
@@ -57,7 +112,6 @@ h1,h2,h3,h4,p{
     font-size: .9rem;
     color: var(--dark-blue);
     letter-spacing: .05em;
-    position: relative;
 
     &::before{
         content: '';
@@ -73,9 +127,26 @@ h1,h2,h3,h4,p{
         opacity: .3;
         border-radius: 1rem;
     }
-
+    
     &:hover::before{
         opacity: 1;
+        animation: btn-learn-more .7s ease-in-out;
+        margin: 0;
+        left: .55em;
+    }
+}
+
+@keyframes btn-learn-more {
+    from{
+        width: .5em;
+    }
+
+    25%{
+        width: .5em;
+    }
+
+    to{
+        width: 9em;
     }
 }
 
@@ -86,7 +157,7 @@ h1,h2,h3,h4,p{
     text-transform: uppercase;
     letter-spacing: .5rem;
     font-size: 2rem;
-    font-size: clamp(2rem, 5vw + 1rem, 3rem);
+    font-size: clamp(2rem, 5vw + 1rem, 2.5rem);
     line-height: 1.3;
 }
 
@@ -137,40 +208,48 @@ header{
         // --color-accent: #fff;
     }
 
-    .menu{
-        position: absolute;
-        top: 6em;
-        left: 0;
-        right: 0;
-        margin: auto;
-        padding: 1em 0;
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 85%;
-        height: 15em;
-        --color-accent: var(--yellow);
-        
-        .btn--filled{
-            margin-top: .5em;
-        }
-        
-        &::after{
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 2em solid transparent;
-            border-top: 2em solid transparent;
-            border-right: 2em solid #fff;
-            border-bottom: 2em solid #fff;
-            position: absolute;
-            top: -2em;
-            right: 0;
-        }
-        display: none;
+    .hamburger-svg{
+        cursor: pointer;
     }
+
+
+    @media screen and (max-width: 46.5em) {
+        .menu{
+            position: absolute;
+            top: 6em;
+            left: 0;
+            right: 0;
+            margin: auto;
+            padding: 1em 0;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 85%;
+            height: 15em;
+            --color-accent: var(--yellow);
+            
+            .btn--filled{
+                margin-top: .5em;
+            }
+            
+            &::after{
+                content: '';
+                width: 0;
+                height: 0;
+                border-left: 2em solid transparent;
+                border-top: 2em solid transparent;
+                border-right: 2em solid #fff;
+                border-bottom: 2em solid #fff;
+                position: absolute;
+                top: -2em;
+                right: 0;
+            }
+            display: none;
+        }
+    }
+
 }
 
 .benefits{
@@ -299,6 +378,19 @@ footer{
 }
 
 @media screen and (min-width: 46.5em) {
+    header{
+        background-image: url(../images/desktop/image-header.jpg);
+        
+        .hamburger-svg{
+            display: none;
+        }
+        
+        .menu{
+            --color-accent: #fff;
+            --color-text: #fff;
+        }
+    }
+
     .benefits{
         grid-template-rows: auto auto auto;
         grid-template-columns: 50% 50%;
