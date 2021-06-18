@@ -158,7 +158,7 @@ h1, h2, h3, h4, p {
   left: 0;
   color: var(--yellow);
   clip-path: ellipse(1em 1em at -2.54% -9.25%);
-  animation: swing 5s 7;
+  animation: swing 5s infinite;
   animation-direction: alternate;
 }
 
@@ -445,6 +445,27 @@ footer .social-media {
   }
   .gallery__sugarcubes {
     content: url(../images/desktop/image-gallery-sugarcubes.jpg);
+  }
+}
+@media screen and (max-width: 350px) {
+  header {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .primary-title {
+    font-size: 1.5em;
+  }
+
+  .benefits__info--small {
+    padding-top: 15rem;
+  }
+
+  footer .btns {
+    gap: 0.5em;
+  }
+  footer .btn {
+    padding: 0;
   }
 }
 
