@@ -80,7 +80,7 @@ h1, h2, h3, h4, p {
   left: 0;
   background-color: var(--yellow);
   border-radius: 5rem;
-  animation: btn-filled 0.7s ease-in-out forwards;
+  animation: btn-filled 0.5s ease-in-out forwards;
 }
 
 @keyframes btn-filled {
@@ -123,7 +123,7 @@ h1, h2, h3, h4, p {
 }
 .btn--learn-more:hover::before {
   opacity: 1;
-  animation: btn-learn-more 0.7s ease-in-out;
+  animation: btn-learn-more 0.5s ease-out;
   margin: 0;
   left: 0.55em;
 }
@@ -243,6 +243,7 @@ header .hamburger-svg {
     justify-content: space-evenly;
     width: 85%;
     height: 15em;
+    z-index: 1000;
     --color-accent: var(--yellow);
     display: none;
   }
